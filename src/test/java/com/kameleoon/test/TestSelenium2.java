@@ -3,6 +3,7 @@ package com.kameleoon.test;
 import com.kameleoon.helpers.WebDriverHelper;
 import com.kameleoon.wrappers.LoginPage;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,7 +29,10 @@ public class TestSelenium2 {
         WebElement docLink = driver.findElement(By.cssSelector("ul.kameleoon-documentation li a"));
         
         Assert.assertEquals("http://support.kameleoon.com/hc/en-us", docLink.getAttribute("href"));
-        
+    }
+    
+    @Before
+    public void tearDown() {
         WebDriverHelper.quitDriver();
     }
 }

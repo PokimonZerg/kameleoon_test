@@ -1,0 +1,5 @@
+com\kameleoon\test\TestSelenium1.class
+com\kameleoon\test\TestSelenium2.class
+com\kameleoon\test\TestSelenium3.class
+com\kameleoon\helpers\WebDriverHelper.class
+com\kameleoon\wrappers\LoginPage.class

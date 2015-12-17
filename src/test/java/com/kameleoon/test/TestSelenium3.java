@@ -3,6 +3,7 @@ package com.kameleoon.test;
 import com.kameleoon.helpers.WebDriverHelper;
 import com.kameleoon.wrappers.LoginPage;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -59,7 +60,10 @@ public class TestSelenium3 {
         prefIcon.click();
         reportLink = driver.findElement(By.xpath("//div[div/text() = \"reporting\"]/span/a"));
         Assert.assertEquals("1", reportLink.findElement(By.tagName("strong")).getText());
-        
+    }
+    
+    @Before
+    public void tearDown() {
         WebDriverHelper.quitDriver();
     }
 }

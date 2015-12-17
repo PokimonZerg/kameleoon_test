@@ -4,6 +4,7 @@ import com.kameleoon.helpers.WebDriverHelper;
 import com.kameleoon.wrappers.LoginPage;
 import java.util.List;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -35,7 +36,10 @@ public class TestSelenium1 {
         
         WebElement status = WebDriverHelper.getElementByCondition(allTests, By.cssSelector("div.status"));
         Assert.assertEquals("Running", status.getText());
-        
+    }
+    
+    @Before
+    public void tearDown() {
         WebDriverHelper.quitDriver();
-    }  
+    }
 }
