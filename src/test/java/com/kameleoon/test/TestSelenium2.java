@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
  * Check that the page loads OK.
  * Check that the link to the documentation is "http://support.kameleoon.com/hc/en-us" (book icon at top right). WARNING: this check should FAIL, as the link is indeed currently not the correct one. This is normal, the test should not currently pass.
  */
-public class SeleniumTest2 {
+public class TestSelenium2 {
     
     @Test
     public void testSimple() throws Exception {
@@ -29,6 +29,6 @@ public class SeleniumTest2 {
         
         Assert.assertEquals("http://support.kameleoon.com/hc/en-us", docLink.getAttribute("href"));
         
-        driver.quit();
+        WebDriverHelper.quitDriver();
     }
 }

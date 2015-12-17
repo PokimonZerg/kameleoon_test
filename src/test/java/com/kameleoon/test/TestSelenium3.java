@@ -18,7 +18,7 @@ import org.openqa.selenium.WebElement;
  * Click on the link again, then click on Universal Analytics on the left menu, then remove this tool (by clicking on the Trash icon).
  * Go one last time on the Preferences page, and check that under reporting there is only 1 reporting tool (Kameleoon).
  */
-public class SeleniumTest3 {
+public class TestSelenium3 {
     
     @Test
     public void testSimple() throws Exception {
@@ -60,6 +60,6 @@ public class SeleniumTest3 {
         reportLink = driver.findElement(By.xpath("//div[div/text() = \"reporting\"]/span/a"));
         Assert.assertEquals("1", reportLink.findElement(By.tagName("strong")).getText());
         
-        driver.quit();
+        WebDriverHelper.quitDriver();
     }
 }

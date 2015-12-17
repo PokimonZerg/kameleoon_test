@@ -14,7 +14,7 @@ import org.openqa.selenium.WebElement;
  * Check that the page loads OK. Then click on button "All tests".
  * Check that the page loads OK. Then verify that there is a row displayed with the name of the test "Other test" and in status Running (check the presence of the icon).
  */
-public class SeleniumTest1 {
+public class TestSelenium1 {
     
     @Test
     public void testSimple() throws Exception {
@@ -36,6 +36,6 @@ public class SeleniumTest1 {
         WebElement status = WebDriverHelper.getElementByCondition(allTests, By.cssSelector("div.status"));
         Assert.assertEquals("Running", status.getText());
         
-        driver.quit();
+        WebDriverHelper.quitDriver();
     }  
 }

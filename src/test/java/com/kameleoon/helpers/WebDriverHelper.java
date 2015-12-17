@@ -14,6 +14,14 @@ public class WebDriverHelper {
         return driver;
     }
     
+    public static void quitDriver() {
+        if (driver == null)
+            return;
+        
+        driver.quit();
+        driver = null;
+    }
+    
     public static int getDefaultTimeout() {
         return 30;
     }
